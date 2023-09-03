@@ -3,15 +3,15 @@ variable "prefix" {
   type        = string
 }
 variable "github_repository_owner" {
-  description = "Name of GitHub repository owner."
+  description = "Name of GitHub repository owner of the application source code."
   type        = string
 }
 variable "github_repository" {
-  description = "Name of GitHub repository."
+  description = "Name of GitHub repository of the application source code."
   type        = string
 }
 variable "github_branch" {
-  description = "Name of source branch."
+  description = "Name of source branch of the application source code."
   type        = string
   default     = "main"
 }

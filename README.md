@@ -1,9 +1,9 @@
 # terraform-aws-ecs-cicd
 
-The module provides the CICD pipeline for AWS ECS.
+The module provides the CICD pipeline for AWS ECS.<br>
 It is assumed that GitHub is used for the source code repository.
 
-After the resource is created, the connection to GitHub must be confirmed from the AWS Management Console.
+:warning: After the resource is created, the connection to GitHub must be confirmed from the AWS Management Console.<br>
 FYI <https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html>
 
 ## Requirements
@@ -48,9 +48,9 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_ecs_cluster_name"></a> [ecs\_cluster\_name](#input\_ecs\_cluster\_name) | Name of the ECS cluster. | `string` | n/a | yes |
 | <a name="input_ecs_service_name"></a> [ecs\_service\_name](#input\_ecs\_service\_name) | Name of the ECS service. | `string` | n/a | yes |
-| <a name="input_github_branch"></a> [github\_branch](#input\_github\_branch) | Name of source branch. | `string` | `"main"` | no |
-| <a name="input_github_repository"></a> [github\_repository](#input\_github\_repository) | Name of GitHub repository. | `string` | n/a | yes |
-| <a name="input_github_repository_owner"></a> [github\_repository\_owner](#input\_github\_repository\_owner) | Name of GitHub repository owner. | `string` | n/a | yes |
+| <a name="input_github_branch"></a> [github\_branch](#input\_github\_branch) | Name of source branch of the application source code. | `string` | `"main"` | no |
+| <a name="input_github_repository"></a> [github\_repository](#input\_github\_repository) | Name of GitHub repository of the application source code. | `string` | n/a | yes |
+| <a name="input_github_repository_owner"></a> [github\_repository\_owner](#input\_github\_repository\_owner) | Name of GitHub repository owner of the application source code. | `string` | n/a | yes |
 | <a name="input_prefix"></a> [prefix](#input\_prefix) | Name prefix for resources. | `string` | n/a | yes |
 | <a name="input_s3_bucket_force_destroy"></a> [s3\_bucket\_force\_destroy](#input\_s3\_bucket\_force\_destroy) | Whether to forcibly delete the S3 bucket. | `bool` | `false` | no |
 

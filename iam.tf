@@ -25,7 +25,6 @@ resource "aws_iam_policy" "codepipeline" {
           "s3:GetObject",
           "s3:GetObjectVersion",
           "s3:GetBucketVersioning",
-          "s3:PutObjectAcl",
           "s3:PutObject",
         ]
         "Resource" : [
@@ -64,7 +63,12 @@ resource "aws_iam_policy" "codepipeline" {
       {
         "Effect" : "Allow"
         "Action" : [
-          "ecs:*",
+          "ecs:DescribeServices",
+          "ecs:DescribeTaskDefinition",
+          "ecs:DescribeTasks",
+          "ecs:ListTasks",
+          "ecs:RegisterTaskDefinition",
+          "ecs:UpdateService",
         ]
         "Resource" : [
           "*",
